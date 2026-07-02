@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Lender - Loan Eligibility Prediction</title>
+    <meta name="description" content="Predict loan eligibility using advanced Machine Learning.">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent sticky-top soft-blur">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-gradient" href="/">Smart Lender</a>
+            <div class="d-flex gap-2">
+                <button id="themeToggle" class="btn btn-outline-light btn-sm rounded-pill px-3 theme-toggle-btn" type="button">🌙 Dark</button>
+                <a href="#highlights" class="btn btn-glow btn-sm rounded-pill px-3">Explore Features</a>
+                <a href="/predict" class="btn btn-glow btn-sm rounded-pill px-3">Predict Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section d-flex align-items-center">
+        <div class="container text-white">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <div class="glass-card p-5 animate-fade-in">
+                        <p class="eyebrow mb-3">AI Lending Intelligence</p>
+                        <h1 class="display-3 fw-bolder mb-4">Smart Lender</h1>
+                        <h2 class="h3 mb-4 text-gradient-accent">Loan Eligibility Prediction System</h2>
+                        <p class="lead mb-5 lh-lg">An interactive Flask-based web application that empowers banks, financial institutions, and credit officers to make faster, data-driven lending decisions using advanced Machine Learning technology, complete with model confidence scores and risk band assessments.</p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="/predict" class="btn btn-glow btn-lg px-5 py-3 rounded-pill fw-bold">Start Prediction</a>
+                            <a href="#highlights" class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill">Explore Features</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="glass-card p-3 animate-fade-in delay-1">
+                        <img src="{{ url_for('static', filename='images/loan_banner.jpg') }}" class="img-fluid rounded-4 hero-image" alt="Loan banner">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="highlights" class="py-5 features-section">
+        <div class="container">
+            <div class="row g-4 mt-2">
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card animate-fade-in">
+                        <div class="feature-icon">📋</div>
+                        <h3>Interactive Forms</h3>
+                        <p>Real-time validation and live feedback as you fill out applicant details.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card animate-fade-in delay-1">
+                        <div class="feature-icon">📊</div>
+                        <h3>Smart Analytics</h3>
+                        <p>Instant loan burden calculations and credibility assessments.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card animate-fade-in delay-2">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Accurate Predictions</h3>
+                        <p>XGBoost-powered model with confidence metrics and risk bands.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card animate-fade-in delay-1">
+                        <div class="feature-icon">💾</div>
+                        <h3>Save Progress</h3>
+                        <p>Auto-save form data across sessions in your browser.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card animate-fade-in delay-2">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Dual Themes</h3>
+                        <p>Light and dark mode support for comfortable viewing anytime.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card animate-fade-in">
+                        <div class="feature-icon">📱</div>
+                        <h3>Mobile Ready</h3>
+                        <p>Fully responsive design for desktop, tablet, and mobile access.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
